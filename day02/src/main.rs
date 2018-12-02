@@ -58,15 +58,3 @@ fn count(map: &mut [i32; 26], input: &str) {
         map[idx] += 1;
     }
 }
-
-/*
-fn has_count(map: &[i32; 26], count: i32) -> bool {
-    map.contains(&count)
-    for c in map {
-        if c == count {
-            return true;
-        }
-    }
-    false
-}
-*/
