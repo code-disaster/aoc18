@@ -1,7 +1,6 @@
 use std::collections::HashSet;
 
 pub fn main() {
-
     let input = include_str!("input.txt");
 
     // part 1
@@ -38,5 +37,4 @@ pub fn main() {
 
         println!("freq = {}", found.unwrap());
     }
-
 }

@@ -1,6 +1,4 @@
-
 pub fn main() {
-
     let input = include_str!("input.txt");
 
     // part 1
@@ -27,7 +25,7 @@ pub fn main() {
 
         'outer: for idxa in 0..len {
             let la = lines[idxa];
-            for idxb in idxa+1..len {
+            for idxb in idxa + 1..len {
                 let lb = lines[idxb];
 
                 let mut chars_a = la.chars();
@@ -38,8 +36,8 @@ pub fn main() {
                     let ca = chars_a.next().unwrap();
                     let cb = chars_b.next().unwrap();
                     if ca != cb {
-                        if la[idxc+1..] == lb[idxc+1..] {
-                            println!("common = {}{}", &la[..idxc], &la[idxc+1..]);
+                        if la[idxc + 1..] == lb[idxc + 1..] {
+                            println!("common = {}{}", &la[..idxc], &la[idxc + 1..]);
                             break 'outer;
                         } else {
                             break;
@@ -49,7 +47,6 @@ pub fn main() {
             }
         }
     }
-
 }
 
 fn count(map: &mut [i32; 26], input: &str) {
