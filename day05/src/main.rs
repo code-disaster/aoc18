@@ -1,7 +1,6 @@
 extern crate regex;
 
 use regex::Regex;
-use std::borrow::Cow;
 
 pub fn main() {
     let input = include_str!("input.txt");
@@ -36,7 +35,7 @@ pub fn main() {
 fn reduce(polymer: &String, l: i32, u: i32) -> (bool, String) {
     let pa = format!("{}{}", l as u8 as char, u as u8 as char);
     let re = Regex::new(pa.as_str()).unwrap();
-    let rs = re.replace(polymer.as_str(), "");
+    let rs = re.replace_all(polymer.as_str(), "");
 
     let mutation = String::from(rs.into_owned());
     let shrink = polymer.len() - mutation.len();
