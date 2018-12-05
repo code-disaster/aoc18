@@ -1,3 +1,6 @@
 [package]
 name = "day05"
 version = "0.1.0"
+
+[dependencies]
+regex = "1.1"
